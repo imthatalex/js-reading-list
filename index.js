@@ -25,6 +25,7 @@ function addBookToLibrary() {
 function render() {
     const BookShelf = document.getElementById('BookShelf');
     const Books = document.querySelectorAll('.book');
+    // prevents duplicates
     Books.forEach((book) => BookShelf.removeChild(book));
     for (let i = 0; i < Library.length; i++) {
         createBook(Library[i]);
