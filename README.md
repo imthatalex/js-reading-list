@@ -10,3 +10,4 @@ Task :
 What I Learned :
 - How to write Performant Code using Constructor Pattern
 - Using Index of the Array to Change Values
+- How to Write CSS using Shortcuts
