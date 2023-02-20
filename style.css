@@ -1,7 +1,9 @@
 body {
     background-image: url(libraryBkg.jpeg);
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
+    min-height: 100vh;
 }
 
 form {
@@ -17,6 +19,7 @@ form {
 }
 
 form>input {
+    width: 100%;
     height: 2em;
     border: 1px solid #e5e7eb;
     border-radius: .5rem;
@@ -31,25 +34,29 @@ form.closed {
 }
 
 form.open {
-    width: 400px;
+    width: 70%;
     height: 400px;
     border: 1px solid #000;
     display: grid;
     z-index: 10;
     position: absolute;
     top: 5em;
+    margin-top: 15px;
 }
 
 #BookShelf {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 25px;
-    width: 60em;
+    width: 100%;
     align-items: center;
+    margin: auto;
+    padding: 20px;
 }
 
 .container {
     display: grid;
+    justify-content: center;
     justify-items: center;
 }
 
@@ -59,23 +66,31 @@ form.open {
 
 .book {
     background-color: #482307;
-    height: 9em;
-    width: 8em;
+    height: 170px;
+    width: 150px;
     color: #f8eedb;
     display: grid;
+    grid-template-columns: 80%;
     grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
     justify-items: center;
     text-transform: capitalize;
     border: 0 solid #e5e7eb;
     border-radius: .5rem;
-    font-size: 1.5em;
+    font-size: 1rem;
     padding: 10px 0 50px 0;
-    box-shadow:10px 10px;
+    box-shadow: 5px 5px;
 }
 
 .book>button {
     font-size: 0.8em;
 }
+
+.longBookTitle {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
 
 .button-83 {
     appearance: button;
@@ -111,4 +126,92 @@ form.open {
 
 .button-83:focus {
     box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+
+.button-84 {
+    appearance: button;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 0 solid #e5e7eb;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #482307;
+    column-gap: 1rem;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    outline: 2px solid transparent;
+    padding: 5px 8px;
+    margin-top: 8px;
+    text-align: center !important;
+    text-transform: none;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+.button-84:active {
+    background-color: #f3f4f6;
+    box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15), 0px 1px 1px rgba(81, 41, 10, 0.15);
+    transform: translateY(0.125rem);
+}
+
+.button-84:focus {
+    box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+@media screen and (max-width: 900px){
+    form.open {
+        width: 90%;
+    }
+
+    #BookShelf {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #BookShelf {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #BookShelf {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #BookShelf {
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .book {
+        height: 130px;
+        width: 120px;
+        font-size: 0.7rem;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .book {
+        height: 100px;
+        width: 90px;
+        font-size: 0.5rem;
+    }
+
+    .button-84 {
+        padding: 2px 10px;
+        font-size: 1.2rem;
+    }
+
 }

@@ -46,6 +46,10 @@ function createBook(book) {
     BookDiv.setAttribute('id', Library.indexOf(book));
 
     TitleDiv.textContent = book.title;
+    if (book.title.length > 15) {
+        TitleDiv.classList.add('longBookTitle');
+    }
+
     AuthorDiv.textContent = book.author;
     PagesDiv.textContent = book.pages;
 
@@ -57,7 +61,7 @@ function createBook(book) {
     }
 
     RemoveBttn.textContent = 'Delete';
-    RemoveBttn.classList.add('button-83')
+    RemoveBttn.classList.add('button-84')
     RemoveBttn.addEventListener('click', () => {
         Library.splice(Library.indexOf(book), 1);
         render();
