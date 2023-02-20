@@ -11,3 +11,5 @@ What I Learned :
 - How to write Performant Code using Constructor Pattern
 - Using Index of the Array to Change Values
 - Expanded my Knowledge on CSS Selectors
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e9eeffc5-cf86-47a4-abee-7babe6074684/deploy-status)](https://app.netlify.com/sites/imthatalex-reading-list/deploys)
