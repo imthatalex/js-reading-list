@@ -15,17 +15,18 @@
             <div id="BookShelf" class="row"></div>
             <form class="closed" onsubmit="event.preventDefault()">
                 <label for="BookTitle">Title</label>
-                <input id="BookTitle" type="text" name="BookTitle"
+                <input required id="BookTitle" type="text" name="BookTitle"
                     onsubmit="(e)=>(e.target.value)">
                 <label for="BookAuthor">Author</label>
-                <input id="BookAuthor" type="text" name="BookAuthor"
+                <input required id="BookAuthor" type="text" name="BookAuthor"
                     onsubmit="(e)=>(e.target.value)">
                 <label for="BookPages">Pages</label>
-                <input id="BookPages" type="number" name="BookPages"
+                <input required id="BookPages" type="number" name="BookPages"
                     onsubmit="(e)=>(e.target.value)">
                 <div>
                     <label for="BookRead">Read</label>
-                    <input id="BookRead" type="checkbox" name="BookRead">
+                    <input required id="BookRead" type="checkbox"
+                        name="BookRead">
                 </div>
                 <button class="button-83" onclick="addBookToLibrary()">Add</button>
             </form>
